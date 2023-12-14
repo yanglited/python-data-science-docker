@@ -6,6 +6,8 @@ RUN pacman -S --noconfirm \
     python \
     python-pip \
     neovim \
+    python-neovim \
+    xclip \
     npm \
     unzip \
     git \
