@@ -12,4 +12,4 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $XAUTHORITY:/root/.Xauthority
       # share code files
-      - ./:/root/:rw
+      - ./:/app/:rw

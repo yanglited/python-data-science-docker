@@ -26,6 +26,7 @@ RUN pacman -S --noconfirm \
     tmux \
     wget \
     neofetch
+RUN npm install -g neovim
 
 RUN pacman -S --noconfirm \
     python-scikit-learn=1.3.2-2 \
@@ -35,3 +36,5 @@ RUN pacman -S --noconfirm \
 WORKDIR /root
 RUN mkdir -p .config/nvim
 RUN git clone https://github.com/yanglited/nvim.yang.git .config/nvim
+
+WORKDIR /app

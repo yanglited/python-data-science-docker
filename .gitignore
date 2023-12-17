@@ -1,4 +1,5 @@
 .Xauthority
 .bash_history
 .config/
-
+.cache
+.npm
