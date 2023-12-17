@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  april_tag_3_docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: apriltag3_version
+    environment:
+      DISPLAY: $DISPLAY
+    network_mode: "host"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $XAUTHORITY:/root/.Xauthority
+      - ../:/app/:rw
+  april_tag_pip_version_docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: pip_version
+    environment:
+      DISPLAY: $DISPLAY
+    network_mode: "host"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $XAUTHORITY:/root/.Xauthority
+      - ../:/app/:rw
